@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman tanpa css</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <header>
+      <!--navbar-->
+      <nav class="bg-slate-800 text-white fixed w-full top-0 z-50">
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <div class="text-xl font-bold">BrandKita</div>
+          <!-- M mobile -->
+          <button id="menu-btn" class="md:hidden">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+          <!-- Menu tampilan website -->
+          <ul class="hidden md:flex gap-6">
+            <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+            <li>
+              <a href="#portfolio" class="hover:text-blue-400">Portfolio</a>
+            </li>
+            <li><a href="#contact" class="hover:text-blue-400">Kontak</a></li>
+          </ul>
+        </div>
+        <!-- Menu tampilan mobile -->
+        <div id="menu" class="hidden md:hidden bg-slate-800 px-6 pb-4">
+          <ul class="flex flex-col gap-4 text-center">
+            <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+            <li>
+              <a href="#portfolio" class="hover:text-blue-400">Portfolio</a>
+            </li>
+            <li><a href="#contact" class="hover:text-blue-400">Kontak</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <header
+      id="hero"
+      class="bg-[url(/img/london.jpg)] bg-cover relative min-h-[80vh] flex flex-col justify-center items-center text-center px-4"
+    >
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative z-10">
+        <h1
+          class="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4"
+        >
+          Selamat datang di website kami
+        </h1>
+        <p class="py-1 text-white">
+          Halaman ini adalah halaman utama website perusahaan
+        </p>
+        <button
+          type="button"
+          class="bg-blue-600 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold transition"
+        >
+          Lihat Portfolio
+        </button>
+        <div
+          class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white"
+        >
+          <div>
+            <span class="font-bold text-white">50+</span> Project Selesai
+          </div>
+          <div><span class="font-bold text-white">10+</span> Client</div>
+          <div>
+            <span class="font-bold text-white">3++</span> Tahun Pelajaran
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--about-->
+    <section id="about" class="px-6 py-16 bg-white">
+      <div
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+      >
+        <div>
+          <div>
+            <h2 class="text-3xl font-bold mb-4">About us</h2>
+            <div class="w-24 h-1 bg-blue-600 mt-3 rounded-full"></div>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quia
+            sapiente. Neque officiis accusamus pariatur? Rem accusamus voluptate
+            quidem dicta, amet placeat adipisci omnis ducimus, id suscipit
+            exercitationem eligendi neque!
+          </p>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quia
+            sapiente. Neque officiis accusamus pariatur? Rem accusamus voluptate
+            quidem dicta, amet placeat adipisci omnis ducimus, id suscipit
+            exercitationem eligendi neque!
+          </p>
+          <p class="text-gray-700 mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quia
+            sapiente. Neque officiis accusamus pariatur? Rem accusamus voluptate
+            quidem dicta, amet placeat adipisci omnis ducimus, id suscipit
+            exercitationem eligendi neque!
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-gray-100 p-8 rounded xl shadow">
+            <h3 class="text-xl font-semibold mb-2">Visi kami</h3>
+            <p class="text-gray-600 mb-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+              adipisci natus sunt nisi voluptatum molestias! Alias vitae
+              temporibus perspiciatis, tempore earum modi pariatur officia, quos
+              voluptas nesciunt vel quisquam voluptatibus!
+            </p>
+          </div>
+          <div class="bg-gray-100 p-8 rounded xl shadow">
+            <h3 class="text-xl font-semibold mb-2">Nilai Perusahaan</h3>
+            <ul>
+              <li>✅ anjayy</li>
+              <li>✅ anjayy</li>
+              <li>✅ anjayy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="px-6 py-16 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-10">Layanan Kami</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Web Development -->
+        <div
+          class="bg-white p-8 rounded-xl shadow transition hover:shadow-xl hover:-translate-y-1"
+        >
+          <div
+            class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-gray-600">
+            Pembuatan website cepat, aman, dan responsif sesuai kebutuhan
+            bisnis.
+          </p>
+        </div>
+        <!-- UI UX -->
+        <div
+          class="bg-white p-8 rounded-xl shadow transition hover:shadow-xl hover:-translate-y-1"
+        >
+          <div
+            class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L3 21l4-7.25M14.25 17L21 21l-4-7.25M12 3v10"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">UI / UX Design</h3>
+          <p class="text-gray-600">
+            Desain antarmuka yang nyaman digunakan dan meningkatkan konversi.
+          </p>
+        </div>
+        <!-- Maintenance -->
+        <div
+          class="bg-white p-8 rounded-xl shadow transition hover:shadow-xl hover:-translate-y-1"
+        >
+          <div
+            class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-green-100 text-green-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Maintenance</h3>
+          <p class="text-gray-600">
+            Perawatan dan pengembangan berkelanjutan untuk website Anda.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--portofolio cobaan-->
+    <section id="Portfolio" class="px-6 py-16 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-10">Portfolio</h2>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!--card-->
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transition hover:shadow-xl hover:-translate-y-1"
+        >
+          <img
+            src="img/company.jpg"
+            alt="company profile website"
+            class="w-full h-46 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Company Profile Website</h3>
+            <p class="text-gray-600 mb-3">
+              Website profil perusahaan yang menampilkan informasi lengkap
+              tentang bisnis anda.
+            </p>
+            <p class="text-sm text-gray-600">Tech:</p>
+            <span
+              class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-600/10"
+              >Html</span
+            >
+            <span
+              class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 inset-ring inset-ring-yellow-600/20"
+              >Tailwind css</span
+            >
+            <span
+              class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20"
+              >Css</span
+            >
+          </div>
+        </div>
+
+        <!--card-->
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transition hover:shadow-xl hover:-translate-y-1"
+        >
+          <img
+            src="img/company.jpg"
+            alt="company profile website"
+            class="w-full h-46 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Company Profile Website</h3>
+            <p class="text-gray-600 mb-3">
+              Website profil perusahaan yang menampilkan informasi lengkap
+              tentang bisnis anda.
+            </p>
+            <p class="text-sm text-gray-600">Tech:</p>
+            <span
+              class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 inset-ring inset-ring-red-600/10"
+              >Html</span
+            >
+            <span
+              class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 inset-ring inset-ring-yellow-600/20"
+              >Tailwind css</span
+            >
+            <span
+              class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20"
+              >Css</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--contact-->
+    <section id="contact" class="px-6 py-16 bg-white">
+      <h2 class="text-3xl font-bold text-center mb-10">Kontak Kami</h2>
+      <form
+        action=""
+        class="max-w-xl mx-auto bg-gray-100 p-8 rounded-xl shadow space-y-4"
+      >
+        <input
+          type="text"
+          name="nama"
+          id="nama"
+          placeholder="Nama"
+          class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500 focus-ring-2 focus-ring-blue-200"
+        />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="email"
+          class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500 focus-ring-2 focus-ring-blue-200"
+        />
+        <textarea
+          type="text"
+          name="pesan"
+          id="pesan"
+          placeholder="pesan"
+          class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500 focus-ring-2 focus-ring-blue-200"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
+        >
+          Kirim pesan
+        </button>
+      </form>
+    </section>
+
+    <footer class="bg-slate-800 text-white text-center p-6 mt-10">
+      <p>&copy; 2026 Brandkita, semua Hak dilindungi</p>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
