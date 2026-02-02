@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web portofolio login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-100 font-sans min-h-screen flex items-center justify-center scroll-smooth"
+  >
+    <!-- Card -->
+    <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+      <form
+        action=""
+        name="login"
+        method="post"
+        onsubmit="return validationLogin()"
+        class="space-y-5"
+      >
+        <h1 class="text-3xl font-bold text-gray-900 text-center">Login</h1>
+
+        <!-- Username -->
+        <div>
+          <label
+            for="username"
+            class="block mb-1 text-sm font-medium text-gray-700"
+          >
+            Username
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Masukkan username"
+            required
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label
+            for="password"
+            class="block mb-1 text-sm font-medium text-gray-700"
+          >
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Masukkan password"
+            required
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+          />
+        </div>
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-500 text-white py-2 rounded-lg font-semibold transition duration-200"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          onclick="window.location.href='index.html'"
+          class="w-full bg-gray-500 hover:bg-blue-500 text-white py-2 rounded-lg font-semibold transition duration-200"
+        >
+          Kembali ke beranda
+        </button>
+      </form>
+    </div>
+
+    <script>
+      function validationLogin() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        const users = [
+          {
+            username: "admin",
+            password: "admin123",
+          },
+        ];
+
+        //cek user
+        const foundUser = users.find(
+          (user) => user.username === username && user.password === password
+        );
+        if (foundUser) {
+          const authData = {
+            isLogin: true,
+            user: {
+              username: foundUser.username,
+            },
+            loginTime: new Date().toISOString(),
+          };
+
+          localStorage.setItem("auth", JSON.stringify(authData));
+          window.location.href = "data.html";
+          return false;
+        } else {
+          alert("Username atau Password salah!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
